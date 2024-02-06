@@ -1,13 +1,23 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const port = 3000;
 
-const stores = require("./stores.json");
+const ModelClass = require("./model.js");
+const Model = new ModelClass();
 
-app.get("/", (req, res) => {
-  res.send("Hello, Express!");
+app.get("/", async (req, res) => {
+  const stores = await Model.getStores();
+  res.json(stores);
 });
 
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
-});
+const server = async () => {
+  await Model.connectDatabase();
+  await Model.setupDatabase();
+
+  app.listen(port, () => {
+    console.log(`Server listening at http://localhost:${port}`);
+  });
+};
+
+server();
