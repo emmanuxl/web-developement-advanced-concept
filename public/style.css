@@ -1,0 +1,107 @@
+/* body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: blanchedalmond;
+    margin: 0;
+    padding: 1rem;
+}
+
+h1{
+    color: blue;
+}
+
+#storeList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#storeList li {
+    flex: 1 0 21%;
+    margin: 1%;
+    box-sizing: border-box;
+    background: #fff;
+    color: azure;
+    padding: 1rem;
+}
+#storeList li a{
+    color: aqua;
+    text-decoration: none;
+}
+
+#storeList li a:hover{
+    color: crimson;
+} */
+
+h1{
+    color: rgb(15, 48, 146);
+    margin: 1%;}
+
+h2 {
+    margin: 1%;
+
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: blanchedalmond;
+    font-size: 12px;
+    margin: 0;
+    padding: 1rem;
+}
+body h2{
+    font-size: medium;
+}
+
+#storeList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#storeList li {
+    flex: 1 0 21%; /* will wrap every 4 items */
+    margin: 1%;
+    box-sizing: border-box;
+    border: 2px solid #333;  /* adds border to each card */
+    /* padding: 10px; */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* adds shadow to give a card effect*/
+    height: 0;
+    padding-bottom: 25%;
+    position: relative;
+    background-color: rgba(128, 180, 25, 0.613);
+  }
+
+  #storeList li a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  #storeList li a:hover{
+    color: crimson;
+  }
+
+  #storeList li div{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+  }
+
+  #storeList li a div:first-child{
+    
+    padding-bottom: 12px;
+  }
+
+  #storeList li a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

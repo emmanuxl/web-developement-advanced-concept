@@ -8,8 +8,17 @@ document.addEventListener("DOMContentLoaded", async () => {
       const listItem = document.createElement("li");
       const storeLink = document.createElement("a");
       storeLink.href = store.url;
-      storeLink.textContent = store.name;
       storeLink.target = "_blank";
+
+      const storeName = document.createElement("div");
+      storeName.textContent = store.name;
+      storeLink.appendChild(storeName);
+
+      const storeDistrict = document.createElement("div");
+      storeDistrict.textContent = store.district;
+      storeLink.appendChild(storeDistrict);
+
+
       listItem.appendChild(storeLink);
       storeListElement.appendChild(listItem);
     });
