@@ -1,42 +1,5 @@
-/* body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: blanchedalmond;
-    margin: 0;
-    padding: 1rem;
-}
-
 h1{
-    color: blue;
-}
-
-#storeList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#storeList li {
-    flex: 1 0 21%;
-    margin: 1%;
-    box-sizing: border-box;
-    background: #fff;
-    color: azure;
-    padding: 1rem;
-}
-#storeList li a{
-    color: aqua;
-    text-decoration: none;
-}
-
-#storeList li a:hover{
-    color: crimson;
-} */
-
-h1{
-    color: rgb(15, 48, 146);
+    color: rgb(50, 90, 210);
     margin: 1%;}
 
 h2 {
@@ -44,9 +7,10 @@ h2 {
 
 }
 
+
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: blanchedalmond;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
     font-size: 12px;
     margin: 0;
     padding: 1rem;
@@ -63,28 +27,29 @@ body h2{
     padding: 0;
     margin: 0;
 }
+  
 
 #storeList li {
-    flex: 1 0 21%; /* will wrap every 4 items */
+    flex: 1 0 21%; /* wraps every 4 items */
     margin: 1%;
     box-sizing: border-box;
     border: 2px solid #333;  /* adds border to each card */
-    /* padding: 10px; */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* adds shadow to give a card effect*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* adds shadow to give a card effect*/
     height: 0;
     padding-bottom: 25%;
     position: relative;
-    background-color: rgba(128, 180, 25, 0.613);
+    background-color: #333;
   }
 
   #storeList li a{
+    color: #f2f2f2;
     position: absolute;
     width: 100%;
     height: 100%;
   }
 
   #storeList li a:hover{
-    color: crimson;
+    color: rgb(50, 90, 210);
   }
 
   #storeList li div{
@@ -100,8 +65,39 @@ body h2{
     padding-bottom: 12px;
   }
 
-  #storeList li a img {
+  /* Styles for Navigation bar */
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Styles for Ad banner */
+  #ad-banner {
     width: 100%;
-    height: 100%;
+    height: 320px;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px 0;
+    color: #333;
+    font-size: 20px;
+  }
+
+  #ad-banner img{
+    width: 100%;
+    max-height: 320px;
     object-fit: cover;
   }
